@@ -6,7 +6,8 @@ from modules import Console
 
 
 def init_icons(interface):
-    pass
+    interface.ui.btnRepo.setIcon(QIcon('resources/icons/Github.svg'))
+
 
 # ------------------------------------------------------------------------
 

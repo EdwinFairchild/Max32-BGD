@@ -124,6 +124,7 @@ def exitFunc():
     # TODO add cleanup code as necessary
     Console.log("Goodbye")
 
+
     # ------------------------------------------------------------------------
 if __name__ == '__main__':
     # todo: compile resurces into python files, not sure if its even necessary at this point
