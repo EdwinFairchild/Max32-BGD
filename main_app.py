@@ -43,7 +43,8 @@ class MainInterface(QMainWindow):
 
     # TODO move this to seprate file
     # This grid layout will live in the scroll area of the Designer
-    vbox = QGridLayout()
+    #vbox = QGridLayout()
+    vbox = QVBoxLayout()
     services = {'count': 0}
     selected_service = None
 

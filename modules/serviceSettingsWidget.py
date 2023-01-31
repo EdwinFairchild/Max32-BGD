@@ -14,17 +14,90 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_widgetService(object):
     def setupUi(self, widgetService):
         widgetService.setObjectName("widgetService")
-        widgetService.resize(656, 699)
+        widgetService.resize(751, 735)
         widgetService.setStyleSheet("border: 0px solid gray;")
+        self.verticalLayout = QtWidgets.QVBoxLayout(widgetService)
+        self.verticalLayout.setObjectName("verticalLayout")
         self.widgetServiceSettings = QtWidgets.QWidget(widgetService)
-        self.widgetServiceSettings.setGeometry(QtCore.QRect(0, 10, 651, 681))
         self.widgetServiceSettings.setMinimumSize(QtCore.QSize(0, 200))
         self.widgetServiceSettings.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "border-radius:15px;\n"
 "border: 1px solid gray;")
         self.widgetServiceSettings.setObjectName("widgetServiceSettings")
-        self.btnToggle_permit_read_2 = QtWidgets.QPushButton(self.widgetServiceSettings)
-        self.btnToggle_permit_read_2.setGeometry(QtCore.QRect(30, 110, 131, 30))
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.widgetServiceSettings)
+        self.verticalLayout_2.setContentsMargins(15, 15, 15, 15)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.frame_3 = QtWidgets.QFrame(self.widgetServiceSettings)
+        self.frame_3.setStyleSheet("border: 0px solid gray;")
+        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_3.setObjectName("frame_3")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_3)
+        self.horizontalLayout_2.setContentsMargins(0, 0, -1, -1)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.frame_4 = QtWidgets.QFrame(self.frame_3)
+        self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_4.setObjectName("frame_4")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.frame_4)
+        self.verticalLayout_3.setContentsMargins(0, 0, -1, -1)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.lbl_service_name = QtWidgets.QLabel(self.frame_4)
+        self.lbl_service_name.setMinimumSize(QtCore.QSize(200, 50))
+        self.lbl_service_name.setMaximumSize(QtCore.QSize(200, 50))
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbl_service_name.setFont(font)
+        self.lbl_service_name.setStyleSheet("text-align: center;\n"
+"padding-left: 0px;\n"
+"\n"
+"border-radius:15px;\n"
+"background-color: rgb(39, 52, 105);\n"
+"    color: rgb(255, 255, 255);")
+        self.lbl_service_name.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbl_service_name.setObjectName("lbl_service_name")
+        self.verticalLayout_3.addWidget(self.lbl_service_name)
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_3.addItem(spacerItem)
+        self.horizontalLayout_2.addWidget(self.frame_4)
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem1)
+        self.verticalLayout_2.addWidget(self.frame_3)
+        self.frame_2 = QtWidgets.QFrame(self.widgetServiceSettings)
+        self.frame_2.setStyleSheet("border: 0px solid gray;")
+        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.label_9 = QtWidgets.QLabel(self.frame_2)
+        self.label_9.setGeometry(QtCore.QRect(360, 150, 151, 41))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label_9.setFont(font)
+        self.label_9.setStyleSheet("color: rgb(255, 255, 255);")
+        self.label_9.setObjectName("label_9")
+        self.checkBox_2 = AnimatedToggle(self.frame_2)
+        self.checkBox_2.setGeometry(QtCore.QRect(20, 30, 71, 41))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(1)
+        sizePolicy.setVerticalStretch(1)
+        sizePolicy.setHeightForWidth(self.checkBox_2.sizePolicy().hasHeightForWidth())
+        self.checkBox_2.setSizePolicy(sizePolicy)
+        self.checkBox_2.setAutoFillBackground(False)
+        self.checkBox_2.setStyleSheet("\n"
+"QCheckBox {\n"
+"color: rgb(255, 255, 255);\n"
+"background-color: rgb(44, 52, 58);\n"
+"border-radius:  5px;\n"
+"padding-left: 5px;\n"
+"}\n"
+"")
+        self.checkBox_2.setText("")
+        self.checkBox_2.setIconSize(QtCore.QSize(20, 20))
+        self.checkBox_2.setObjectName("checkBox_2")
+        self.btnToggle_permit_read_2 = QtWidgets.QPushButton(self.frame_2)
+        self.btnToggle_permit_read_2.setGeometry(QtCore.QRect(20, 80, 131, 30))
         self.btnToggle_permit_read_2.setMinimumSize(QtCore.QSize(100, 30))
         font = QtGui.QFont()
         font.setPointSize(11)
@@ -53,8 +126,8 @@ class Ui_widgetService(object):
 "}")
         self.btnToggle_permit_read_2.setCheckable(True)
         self.btnToggle_permit_read_2.setObjectName("btnToggle_permit_read_2")
-        self.btnToggle_permit_read = QtWidgets.QPushButton(self.widgetServiceSettings)
-        self.btnToggle_permit_read.setGeometry(QtCore.QRect(30, 160, 131, 30))
+        self.btnToggle_permit_read = QtWidgets.QPushButton(self.frame_2)
+        self.btnToggle_permit_read.setGeometry(QtCore.QRect(20, 130, 131, 30))
         self.btnToggle_permit_read.setMinimumSize(QtCore.QSize(100, 30))
         font = QtGui.QFont()
         font.setPointSize(11)
@@ -83,63 +156,34 @@ class Ui_widgetService(object):
 "}")
         self.btnToggle_permit_read.setCheckable(True)
         self.btnToggle_permit_read.setObjectName("btnToggle_permit_read")
-        self.checkBox_2 = AnimatedToggle(self.widgetServiceSettings)
-        self.checkBox_2.setGeometry(QtCore.QRect(30, 60, 71, 41))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(1)
-        sizePolicy.setVerticalStretch(1)
-        sizePolicy.setHeightForWidth(self.checkBox_2.sizePolicy().hasHeightForWidth())
-        self.checkBox_2.setSizePolicy(sizePolicy)
-        self.checkBox_2.setAutoFillBackground(False)
-        self.checkBox_2.setStyleSheet("\n"
-"QCheckBox {\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(44, 52, 58);\n"
-"border-radius:  5px;\n"
-"padding-left: 5px;\n"
-"}\n"
-"")
-        self.checkBox_2.setText("")
-        self.checkBox_2.setIconSize(QtCore.QSize(20, 20))
-        self.checkBox_2.setObjectName("checkBox_2")
-        self.label_9 = QtWidgets.QLabel(self.widgetServiceSettings)
-        self.label_9.setGeometry(QtCore.QRect(240, 90, 151, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.label_9.setFont(font)
-        self.label_9.setStyleSheet("color: rgb(255, 255, 255);")
-        self.label_9.setObjectName("label_9")
-        self.lbl_service_name = QtWidgets.QLabel(self.widgetServiceSettings)
-        self.lbl_service_name.setGeometry(QtCore.QRect(0, 0, 151, 31))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.lbl_service_name.setFont(font)
-        self.lbl_service_name.setStyleSheet("text-align: center;\n"
-"padding-left: 0px;\n"
-"border-radius:5px;\n"
-"background-color: rgb(39, 52, 105);\n"
-"    color: rgb(255, 255, 255);")
-        self.lbl_service_name.setAlignment(QtCore.Qt.AlignCenter)
-        self.lbl_service_name.setObjectName("lbl_service_name")
+        self.verticalLayout_2.addWidget(self.frame_2)
         self.frame = QtWidgets.QFrame(self.widgetServiceSettings)
-        self.frame.setGeometry(QtCore.QRect(30, 290, 581, 361))
-        self.frame.setStyleSheet("background-color: rgb(231,232,237);\n"
-"border: 0px solid gray;")
+        self.frame.setStyleSheet("\n"
+"background-color: rgb(231,232,237);\n"
+"border: 0px solid gray;\n"
+"border-radius:15px;")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.frame)
+        self.horizontalLayout.setContentsMargins(10, 10, 10, 10)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.serviceScrollArea = QtWidgets.QScrollArea(self.frame)
-        self.serviceScrollArea.setStyleSheet("")
+        self.serviceScrollArea.setStyleSheet("background-color: rgb(231,232,237);\n"
+"border: 0px solid gray;\n"
+"border-radius:15px;")
         self.serviceScrollArea.setWidgetResizable(True)
         self.serviceScrollArea.setObjectName("serviceScrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 563, 343))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 683, 341))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.serviceScrollArea.setWidget(self.scrollAreaWidgetContents)
         self.horizontalLayout.addWidget(self.serviceScrollArea)
+        self.verticalLayout_2.addWidget(self.frame)
+        self.verticalLayout_2.setStretch(0, 1)
+        self.verticalLayout_2.setStretch(1, 6)
+        self.verticalLayout_2.setStretch(2, 9)
+        self.verticalLayout.addWidget(self.widgetServiceSettings)
 
         self.retranslateUi(widgetService)
         QtCore.QMetaObject.connectSlotsByName(widgetService)
@@ -147,8 +191,18 @@ class Ui_widgetService(object):
     def retranslateUi(self, widgetService):
         _translate = QtCore.QCoreApplication.translate
         widgetService.setWindowTitle(_translate("widgetService", "Form"))
+        self.lbl_service_name.setText(_translate("widgetService", "Service"))
+        self.label_9.setText(_translate("widgetService", "Characteristic"))
         self.btnToggle_permit_read_2.setText(_translate("widgetService", "Write"))
         self.btnToggle_permit_read.setText(_translate("widgetService", "Read"))
-        self.label_9.setText(_translate("widgetService", "Characteristic"))
-        self.lbl_service_name.setText(_translate("widgetService", "Service"))
 from toggle import AnimatedToggle
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    widgetService = QtWidgets.QWidget()
+    ui = Ui_widgetService()
+    ui.setupUi(widgetService)
+    widgetService.show()
+    sys.exit(app.exec_())

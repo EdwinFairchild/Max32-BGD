@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>656</width>
-    <height>699</height>
+    <width>751</width>
+    <height>735</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,148 +16,187 @@
   <property name="styleSheet">
    <string notr="true">border: 0px solid gray;</string>
   </property>
-  <widget class="QWidget" name="widgetServiceSettings" native="true">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>10</y>
-     <width>651</width>
-     <height>681</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>200</height>
-    </size>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QWidget" name="widgetServiceSettings" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>200</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
 border-radius:15px;
 border: 1px solid gray;</string>
-   </property>
-   <widget class="QPushButton" name="btnToggle_permit_read_2">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>110</y>
-      <width>131</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>100</width>
-      <height>30</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-text-align: center;
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,6,9">
+      <property name="leftMargin">
+       <number>15</number>
+      </property>
+      <property name="topMargin">
+       <number>15</number>
+      </property>
+      <property name="rightMargin">
+       <number>15</number>
+      </property>
+      <property name="bottomMargin">
+       <number>15</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="frame_3">
+        <property name="styleSheet">
+         <string notr="true">border: 0px solid gray;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QFrame" name="frame_4">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="lbl_service_name">
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>200</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>18</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">text-align: center;
 padding-left: 0px;
-border-radius:5px;
-border: 0px solid gray;
-background-color: rgb(170,200,255);
-color: rgb(30, 39, 73);
 
-}
-
-QPushButton:hover{
-
-background-color: rgb(29, 42,95);
-	color: rgb(255, 255, 255);
-
-}
-
-QPushButton:pressed{
-	
-		color: rgb(255, 255, 255);
-background-color: rgb(48, 52, 63);
-}</string>
-    </property>
-    <property name="text">
-     <string>Write</string>
-    </property>
-    <property name="checkable">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnToggle_permit_read">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>160</y>
-      <width>131</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>100</width>
-      <height>30</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-text-align: center;
-padding-left: 0px;
-border-radius:5px;
-background-color: rgb(170,200,255);
-border: 0px solid gray;
-color: rgb(30, 39, 73);
-
-}
-
-QPushButton:hover{
-
-background-color: rgb(29, 42,95);
-	color: rgb(255, 255, 255);
-
-}
-
-QPushButton:pressed{
-	
-		color: rgb(255, 255, 255);
-background-color: rgb(48, 52, 63);
-}</string>
-    </property>
-    <property name="text">
-     <string>Read</string>
-    </property>
-    <property name="checkable">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="AnimatedToggle" name="checkBox_2">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>60</y>
-      <width>71</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-      <horstretch>1</horstretch>
-      <verstretch>1</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
+border-radius:15px;
+background-color: rgb(39, 52, 105);
+	color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="text">
+               <string>Service</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_2">
+        <property name="styleSheet">
+         <string notr="true">border: 0px solid gray;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_9">
+         <property name="geometry">
+          <rect>
+           <x>360</x>
+           <y>150</y>
+           <width>151</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Characteristic</string>
+         </property>
+        </widget>
+        <widget class="AnimatedToggle" name="checkBox_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>30</y>
+           <width>71</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>1</horstretch>
+           <verstretch>1</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
 QCheckBox {
 color: rgb(255, 255, 255);
 background-color: rgb(44, 52, 58);
@@ -165,110 +204,177 @@ border-radius:  5px;
 padding-left: 5px;
 }
 </string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>20</width>
-      <height>20</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_9">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>90</y>
-      <width>151</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Characteristic</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_service_name">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">text-align: center;
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnToggle_permit_read_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>80</y>
+           <width>131</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+text-align: center;
 padding-left: 0px;
 border-radius:5px;
-background-color: rgb(39, 52, 105);
-	color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Service</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QFrame" name="frame">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>290</y>
-      <width>581</width>
-      <height>361</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(231,232,237);
-border: 0px solid gray;</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QScrollArea" name="serviceScrollArea">
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-       <property name="widgetResizable">
-        <bool>true</bool>
-       </property>
-       <widget class="QWidget" name="scrollAreaWidgetContents">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>563</width>
-          <height>343</height>
-         </rect>
-        </property>
+border: 0px solid gray;
+background-color: rgb(170,200,255);
+color: rgb(30, 39, 73);
+
+}
+
+QPushButton:hover{
+
+background-color: rgb(29, 42,95);
+	color: rgb(255, 255, 255);
+
+}
+
+QPushButton:pressed{
+	
+		color: rgb(255, 255, 255);
+background-color: rgb(48, 52, 63);
+}</string>
+         </property>
+         <property name="text">
+          <string>Write</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnToggle_permit_read">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>130</y>
+           <width>131</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+text-align: center;
+padding-left: 0px;
+border-radius:5px;
+background-color: rgb(170,200,255);
+border: 0px solid gray;
+color: rgb(30, 39, 73);
+
+}
+
+QPushButton:hover{
+
+background-color: rgb(29, 42,95);
+	color: rgb(255, 255, 255);
+
+}
+
+QPushButton:pressed{
+	
+		color: rgb(255, 255, 255);
+background-color: rgb(48, 52, 63);
+}</string>
+         </property>
+         <property name="text">
+          <string>Read</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
        </widget>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-  </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: rgb(231,232,237);
+border: 0px solid gray;
+border-radius:15px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="topMargin">
+          <number>10</number>
+         </property>
+         <property name="rightMargin">
+          <number>10</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QScrollArea" name="serviceScrollArea">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(231,232,237);
+border: 0px solid gray;
+border-radius:15px;</string>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>683</width>
+              <height>341</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <customwidgets>
   <customwidget>

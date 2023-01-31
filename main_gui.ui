@@ -887,7 +887,7 @@ background-color: rgb(241,242,247);
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_16">
+                      <layout class="QVBoxLayout" name="verticalLayout_2">
                        <item>
                         <widget class="QScrollArea" name="scrollArea">
                          <property name="sizePolicy">
@@ -898,7 +898,7 @@ background-color: rgb(241,242,247);
                          </property>
                          <property name="maximumSize">
                           <size>
-                           <width>1000</width>
+                           <width>999996</width>
                            <height>16777215</height>
                           </size>
                          </property>
@@ -919,6 +919,9 @@ background-color: rgb(241,242,247);
                          </property>
                          <property name="verticalScrollBarPolicy">
                           <enum>Qt::ScrollBarAsNeeded</enum>
+                         </property>
+                         <property name="sizeAdjustPolicy">
+                          <enum>QAbstractScrollArea::AdjustToContents</enum>
                          </property>
                          <property name="widgetResizable">
                           <bool>true</bool>

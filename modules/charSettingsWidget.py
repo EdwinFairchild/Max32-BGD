@@ -14,10 +14,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_widgetChar(object):
     def setupUi(self, widgetChar):
         widgetChar.setObjectName("widgetChar")
-        widgetChar.resize(559, 282)
+        widgetChar.resize(641, 313)
         widgetChar.setStyleSheet("border: 0px solid gray;")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(widgetChar)
+        self.horizontalLayout.setObjectName("horizontalLayout")
         self.widgetCharSettings = QtWidgets.QWidget(widgetChar)
-        self.widgetCharSettings.setGeometry(QtCore.QRect(0, 10, 551, 251))
         self.widgetCharSettings.setMinimumSize(QtCore.QSize(0, 200))
         self.widgetCharSettings.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "border-radius:15px;\n"
@@ -121,6 +122,7 @@ class Ui_widgetChar(object):
 "    color: rgb(255, 255, 255);")
         self.lbl_char_name.setAlignment(QtCore.Qt.AlignCenter)
         self.lbl_char_name.setObjectName("lbl_char_name")
+        self.horizontalLayout.addWidget(self.widgetCharSettings)
 
         self.retranslateUi(widgetChar)
         QtCore.QMetaObject.connectSlotsByName(widgetChar)
@@ -133,3 +135,13 @@ class Ui_widgetChar(object):
         self.label_9.setText(_translate("widgetChar", "Characteristic"))
         self.lbl_char_name.setText(_translate("widgetChar", "Characterisitic"))
 from toggle import AnimatedToggle
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    widgetChar = QtWidgets.QWidget()
+    ui = Ui_widgetChar()
+    ui.setupUi(widgetChar)
+    widgetChar.show()
+    sys.exit(app.exec_())

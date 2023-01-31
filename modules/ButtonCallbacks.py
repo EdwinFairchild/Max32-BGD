@@ -32,7 +32,7 @@ def btn_add_service(interface):
     newService = QTreeWidgetItem([temp_name])
     interface.ui.gatt_tree.addTopLevelItem(newService)
 
-    # highlight current top-level item in Gatt Tree Widget
+    # highlight and select current top-level item in Gatt Tree Widget
     interface.ui.gatt_tree.setCurrentItem(
         interface.ui.gatt_tree.topLevelItem(interface.services['count']))
     interface.selected_service = interface.ui.gatt_tree.currentItem()
@@ -41,14 +41,19 @@ def btn_add_service(interface):
     scroll = QScrollArea()  # Scroll Area which contains the widgets, set as the centralWidget
     widget = QWidget()           # Widget that contains the collection of Vertical Box
 
+    # Make an empty widget to load the service widget UI into
     tempWidget = QtWidgets.QWidget()
     uiwidget = Ui_widgetService()
-    tempWidget.setMinimumHeight(695)
+    tempWidget.setMinimumHeight(790)
     uiwidget.setupUi(tempWidget)
+    tempWidget.setLayout(QVBoxLayout())
+    uiwidget.lbl_service_name.setText(temp_name)
 
-    # add to vertical layout row,column
-    interface.vbox.addWidget(tempWidget, interface.services['count'], 0)
-    interface.vbox.setContentsMargins(QMargins(20, 0, 0, 0))
+    # add to grid layout row,column ( when vbox =  gridlayout)
+    #interface.vbox.addWidget(tempWidget, interface.services['count'], 0)
+    # add to vertical layout 
+    interface.vbox.addWidget(tempWidget)
+    interface.vbox.setContentsMargins(QMargins(5, 5, 5, 5))
     attributeDict[f"attribute: {interface.services['count']}"] = (
         uiwidget, interface.services['count'])
     # retreive the widget object from the tuple in the dictionary
@@ -56,16 +61,15 @@ def btn_add_service(interface):
     # test[0].label_9.setText(f"I am : {interface.services['count']}")
 
     # connect callbacks and change name label
-    uiwidget.btnToggle_permit_read.clicked.connect(
-        lambda state: btn_read_property(interface, test[1]))
-    uiwidget.lbl_service_name.setText(temp_name)
+    # uiwidget.btnToggle_permit_read.clicked.connect(
+    #     lambda state: btn_read_property(interface, test[1]))
     widget.setLayout(interface.vbox)
 
     interface.ui.scrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
     interface.ui.scrollArea.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
     interface.ui.scrollArea.setWidgetResizable(True)
     interface.ui.scrollArea.setWidget(widget)
-
+    
     # add new item to service list
     layout = QGridLayout()
     service_dict = {'grid_index': interface.services['count'],
@@ -109,7 +113,7 @@ def btn_add_char(interface):
 
     tempWidget = QtWidgets.QWidget()
     uiwidget = Ui_widgetChar()
-    tempWidget.setMinimumHeight(260)
+    tempWidget.setMinimumHeight(460)
 
     uiwidget.setupUi(tempWidget)
     uiwidget.lbl_char_name.setText(
@@ -119,7 +123,7 @@ def btn_add_char(interface):
     layout2 = interface.services[topLevelService.text(0)]['grid_layout']
     layout2.addWidget(
         tempWidget, interface.services[topLevelService.text(0)]['char_count'], 0)
-    layout2.setContentsMargins(QMargins(5, 0, 0, 0))
+    layout2.setContentsMargins(QMargins(5, 5, 5, 5))
 
     # add child to Gatt tree widget
     child = QTreeWidgetItem(
@@ -148,7 +152,7 @@ def btn_add_char(interface):
 # ------------------------------------------------------------------------
 
 def btn_github(interface):
-    webbrowser.open('https://github.com/EdwinFairchild/BLE-PyDex')
+    webbrowser.open('https://github.com/EdwinFairchild/Max32-BGD')
 # ------------------------------------------------------------------------
 
 
